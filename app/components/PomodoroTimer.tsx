@@ -68,23 +68,23 @@ const PomodoroTimer = () => {
 
   return (
     <div className={`flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-orange-400 to-orange-600 ${inter.className}`}>
-      <div className="p-12 rounded-3xl bg-white/10 backdrop-blur-lg shadow-2xl">
-        <h1 className="text-3xl font-medium text-white/90 mb-10 text-center tracking-tight">
+      <div className="w-[460px] px-16 py-14 rounded-[32px] bg-white/10 backdrop-blur-lg shadow-2xl">
+        <h1 className="text-2xl font-medium text-white/90 mb-8 text-center tracking-tight">
           {isBreak ? 'Break Time' : 'Focus Time'}
         </h1>
-        <div className="text-[120px] font-light text-white mb-10 text-center tracking-tight leading-none">
+        <div className="text-[130px] font-extralight text-white mb-12 text-center tracking-tight leading-none">
           {formatTime(minutes)}:{formatTime(seconds)}
         </div>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-3 justify-center">
           <button
             onClick={toggleTimer}
-            className="px-10 py-4 rounded-xl bg-white/20 hover:bg-white/25 text-white text-lg font-medium transition-all duration-200 hover:scale-105"
+            className="w-32 py-4 rounded-xl bg-white/20 hover:bg-white/25 text-white text-base font-medium transition-all duration-200 hover:scale-102"
           >
             {isActive ? 'Pause' : 'Start'}
           </button>
           <button
             onClick={resetTimer}
-            className="px-10 py-4 rounded-xl bg-white/15 hover:bg-white/20 text-white/90 text-lg font-medium transition-all duration-200 hover:scale-105"
+            className="w-32 py-4 rounded-xl bg-white/15 hover:bg-white/20 text-white/90 text-base font-medium transition-all duration-200 hover:scale-102"
           >
             Reset
           </button>
